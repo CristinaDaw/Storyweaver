@@ -1,0 +1,49 @@
+#guest-wrapper {
+    border-radius: 1em;
+}
+
+@media (max-width: 1024px) {
+    /* Estilos para tablet */
+
+}
+
+@media (max-width: 767px) {
+    /* Estilos para móvil */
+    body {
+        background-image: none;
+        background-color: rgb(31, 41, 55);
+    }
+
+    #guest-container {
+        display: flex;
+        justify-content: center;
+        padding-top: 0;
+        background-image: url("../img/mobile-bg.jpg");
+        background-size: cover;
+        background-position: top right;
+    }
+
+    #guest-wrapper {
+        display: flex;
+        align-self: center;
+        justify-content: center;
+        box-shadow: none;
+        margin-top: 0;
+        width: 90%;
+    }
+
+    #logo-login {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        margin: 1em auto 2em auto;
+    }
+
+    #guest-wrapper div form{
+        display: flex;
+        width: 75vw;
+        flex-direction: column;
+        gap: .5em;
+
+    }
+}

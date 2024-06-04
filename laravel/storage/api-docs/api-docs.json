@@ -1,0 +1,1020 @@
+{
+    "openapi": "3.0.0",
+    "info": {
+        "title": "L5 OpenApi",
+        "description": "L5 Swagger OpenApi description",
+        "contact": {
+            "email": "cristinaperezboix.alu@iespacomolla.es"
+        },
+        "license": {
+            "name": "Apache 2.0",
+            "url": "https://www.apache.org/licenses/LICENSE-2.0.html"
+        },
+        "version": "1.0.0",
+        "x-logo": {
+            "url": "https://via.placeholder.com/190x90.png?text=L5-Swagger"
+        }
+    },
+    "paths": {
+        "/characters/{id}/edit": {
+            "get": {
+                "tags": [
+                    "Characters"
+                ],
+                "summary": "Muestra el formulario para editar un personaje específico",
+                "description": "Muestra el formulario para editar un personaje específico.",
+                "operationId": "050f5684b70a825363ea1a1f8af29b0f",
+                "parameters": [
+                    {
+                        "name": "id",
+                        "in": "path",
+                        "description": "ID del personaje",
+                        "required": true,
+                        "schema": {
+                            "type": "integer",
+                            "format": "int64"
+                        }
+                    }
+                ],
+                "responses": {
+                    "200": {
+                        "description": "Vista del formulario para editar el personaje"
+                    },
+                    "404": {
+                        "description": "Character not found"
+                    }
+                }
+            }
+        },
+        "/characters/{id}": {
+            "put": {
+                "tags": [
+                    "Characters"
+                ],
+                "summary": "Actualiza un personaje específico",
+                "description": "Actualiza un personaje específico.",
+                "operationId": "821d2b3fd3bc58de60d21da164a85fcc",
+                "parameters": [
+                    {
+                        "name": "id",
+                        "in": "path",
+                        "description": "ID del personaje",
+                        "required": true,
+                        "schema": {
+                            "type": "integer",
+                            "format": "int64"
+                        }
+                    }
+                ],
+                "requestBody": {
+                    "required": true,
+                    "content": {
+                        "application/json": {
+                            "schema": {
+                                "properties": {
+                                    "name": {
+                                        "description": "El nombre del personaje",
+                                        "type": "string"
+                                    },
+                                    "class": {
+                                        "description": "La clase del personaje",
+                                        "type": "string"
+                                    },
+                                    "race": {
+                                        "description": "La raza del personaje",
+                                        "type": "string"
+                                    },
+                                    "faction": {
+                                        "description": "La facción del personaje",
+                                        "type": "string"
+                                    },
+                                    "background": {
+                                        "description": "El trasfondo del personaje",
+                                        "type": "string"
+                                    }
+                                },
+                                "type": "object"
+                            }
+                        }
+                    }
+                },
+                "responses": {
+                    "302": {
+                        "description": "Character updated successfully"
+                    },
+                    "404": {
+                        "description": "Character not found"
+                    }
+                }
+            },
+            "delete": {
+                "tags": [
+                    "Characters"
+                ],
+                "summary": "Elimina el personaje especificado",
+                "description": "Elimina un personaje específico.",
+                "operationId": "a157fcbefc13849cfc3bfc85f0daaa1a",
+                "parameters": [
+                    {
+                        "name": "id",
+                        "in": "path",
+                        "description": "ID del personaje",
+                        "required": true,
+                        "schema": {
+                            "type": "integer",
+                            "format": "int64"
+                        }
+                    }
+                ],
+                "responses": {
+                    "204": {
+                        "description": "Successful character delete"
+                    },
+                    "403": {
+                        "description": "You have no permission"
+                    },
+                    "404": {
+                        "description": "Character not found"
+                    }
+                }
+            }
+        },
+        "/api/character/{character_id}/initial-event": {
+            "post": {
+                "tags": [
+                    "Character"
+                ],
+                "summary": "Almacena un evento inicial para un personaje",
+                "description": "Crea un registro de evento inicial en la base de datos para un personaje específico.",
+                "operationId": "storeInitialEvent",
+                "parameters": [
+                    {
+                        "name": "character_id",
+                        "in": "path",
+                        "description": "ID del personaje",
+                        "required": true,
+                        "schema": {
+                            "type": "integer",
+                            "format": "int64"
+                        }
+                    }
+                ],
+                "responses": {
+                    "302": {
+                        "description": "Redirecciona a la página de inicio del dashboard",
+                        "content": {
+                            "application/json": {
+                                "schema": {
+                                    "properties": {
+                                        "success": {
+                                            "type": "string",
+                                            "example": "Character created successfully"
+                                        }
+                                    },
+                                    "type": "object"
+                                }
+                            }
+                        }
+                    },
+                    "404": {
+                        "description": "Personaje no encontrado",
+                        "content": {
+                            "application/json": {
+                                "schema": {
+                                    "properties": {
+                                        "message": {
+                                            "type": "string",
+                                            "example": "Personaje no encontrado"
+                                        }
+                                    },
+                                    "type": "object"
+                                }
+                            }
+                        }
+                    }
+                },
+                "security": [
+                    {
+                        "bearerAuth": []
+                    }
+                ]
+            }
+        },
+        "/api/character/{character_id}/ending-event": {
+            "post": {
+                "tags": [
+                    "Character"
+                ],
+                "summary": "Almacena un evento de finalización para un personaje",
+                "description": "Crea un registro de evento de finalización en la base de datos para un personaje específico.",
+                "operationId": "storeEndingEvent",
+                "parameters": [
+                    {
+                        "name": "character_id",
+                        "in": "path",
+                        "description": "ID del personaje",
+                        "required": true,
+                        "schema": {
+                            "type": "integer",
+                            "format": "int64"
+                        }
+                    }
+                ],
+                "responses": {
+                    "302": {
+                        "description": "Redirecciona a la página de inicio del dashboard",
+                        "content": {
+                            "application/json": {
+                                "schema": {
+                                    "properties": {
+                                        "success": {
+                                            "type": "string",
+                                            "example": "Game finished successfully"
+                                        }
+                                    },
+                                    "type": "object"
+                                }
+                            }
+                        }
+                    },
+                    "404": {
+                        "description": "Personaje no encontrado",
+                        "content": {
+                            "application/json": {
+                                "schema": {
+                                    "properties": {
+                                        "message": {
+                                            "type": "string",
+                                            "example": "Personaje no encontrado"
+                                        }
+                                    },
+                                    "type": "object"
+                                }
+                            }
+                        }
+                    }
+                },
+                "security": [
+                    {
+                        "bearerAuth": []
+                    }
+                ]
+            }
+        },
+        "/events/latest": {
+            "get": {
+                "tags": [
+                    "Events"
+                ],
+                "summary": "Obtener los últimos eventos",
+                "description": "Obtiene los últimos eventos ordenados por fecha para cada personaje.",
+                "operationId": "indexLatest",
+                "responses": {
+                    "200": {
+                        "description": "Operación exitosa"
+                    },
+                    "500": {
+                        "description": "Error del servidor"
+                    }
+                }
+            }
+        },
+        "/games/{id}": {
+            "get": {
+                "tags": [
+                    "Games"
+                ],
+                "summary": "Muestra un juego por ID",
+                "description": "Muestra un juego por ID.",
+                "operationId": "bd823a9a8a3dde40ae85d4481b6b1351",
+                "parameters": [
+                    {
+                        "name": "id",
+                        "in": "path",
+                        "description": "ID del juego",
+                        "required": true,
+                        "schema": {
+                            "type": "integer",
+                            "format": "int64"
+                        }
+                    }
+                ],
+                "responses": {
+                    "200": {
+                        "description": "Vista para mostrar el juego"
+                    },
+                    "404": {
+                        "description": "Game not found"
+                    }
+                }
+            }
+        },
+        "/api/games": {
+            "post": {
+                "tags": [
+                    "Games"
+                ],
+                "summary": "Almacena un nuevo juego",
+                "description": "Crea un nuevo registro de juego en la base de datos.",
+                "operationId": "store",
+                "responses": {
+                    "302": {
+                        "description": "Redirecciona a la página de creación de personajes",
+                        "content": {
+                            "application/json": {
+                                "schema": {
+                                    "properties": {
+                                        "game_id": {
+                                            "type": "integer",
+                                            "example": "1"
+                                        }
+                                    },
+                                    "type": "object"
+                                }
+                            }
+                        }
+                    }
+                },
+                "security": [
+                    {
+                        "bearerAuth": []
+                    }
+                ]
+            }
+        },
+        "/api/games/{game_id}": {
+            "get": {
+                "tags": [
+                    "Games"
+                ],
+                "summary": "Muestra los detalles de un juego específico",
+                "description": "Recupera los detalles de un juego específico en la base de datos.",
+                "operationId": "show",
+                "parameters": [
+                    {
+                        "name": "game_id",
+                        "in": "path",
+                        "description": "ID del juego",
+                        "required": true,
+                        "schema": {
+                            "type": "integer",
+                            "format": "int64"
+                        }
+                    }
+                ],
+                "responses": {
+                    "200": {
+                        "description": "Devuelve la vista con los detalles del juego"
+                    },
+                    "404": {
+                        "description": "Juego no encontrado",
+                        "content": {
+                            "application/json": {
+                                "schema": {
+                                    "properties": {
+                                        "message": {
+                                            "type": "string",
+                                            "example": "Juego no encontrado"
+                                        }
+                                    },
+                                    "type": "object"
+                                }
+                            }
+                        }
+                    }
+                },
+                "security": [
+                    {
+                        "bearerAuth": []
+                    }
+                ]
+            }
+        },
+        "/api/games/finish": {
+            "post": {
+                "tags": [
+                    "Games"
+                ],
+                "summary": "Finaliza un juego",
+                "description": "Actualiza el estado de un juego a 'Finalizado' en la base de datos.",
+                "operationId": "finish",
+                "requestBody": {
+                    "required": true,
+                    "content": {
+                        "application/json": {
+                            "schema": {
+                                "required": [
+                                    "game_id"
+                                ],
+                                "properties": {
+                                    "game_id": {
+                                        "type": "integer",
+                                        "example": "1"
+                                    }
+                                },
+                                "type": "object"
+                            }
+                        }
+                    }
+                },
+                "responses": {
+                    "302": {
+                        "description": "Redirecciona al evento de finalización del juego",
+                        "content": {
+                            "application/json": {
+                                "schema": {
+                                    "properties": {
+                                        "character_id": {
+                                            "type": "integer",
+                                            "example": "1"
+                                        }
+                                    },
+                                    "type": "object"
+                                }
+                            }
+                        }
+                    },
+                    "404": {
+                        "description": "Juego no encontrado",
+                        "content": {
+                            "application/json": {
+                                "schema": {
+                                    "properties": {
+                                        "message": {
+                                            "type": "string",
+                                            "example": "Juego no encontrado"
+                                        }
+                                    },
+                                    "type": "object"
+                                }
+                            }
+                        }
+                    }
+                },
+                "security": [
+                    {
+                        "bearerAuth": []
+                    }
+                ]
+            }
+        },
+        "/api/games/{id}": {
+            "delete": {
+                "tags": [
+                    "Games"
+                ],
+                "summary": "Elimina un juego",
+                "description": "Elimina un juego específico de la base de datos.",
+                "operationId": "destroyGame",
+                "parameters": [
+                    {
+                        "name": "id",
+                        "in": "path",
+                        "description": "ID del juego",
+                        "required": true,
+                        "schema": {
+                            "type": "integer",
+                            "format": "int64"
+                        }
+                    }
+                ],
+                "responses": {
+                    "302": {
+                        "description": "Redirecciona a la página de inicio del dashboard",
+                        "content": {
+                            "application/json": {
+                                "schema": {
+                                    "properties": {
+                                        "success": {
+                                            "type": "string",
+                                            "example": "Successful game delete!"
+                                        }
+                                    },
+                                    "type": "object"
+                                }
+                            }
+                        }
+                    },
+                    "404": {
+                        "description": "Juego no encontrado",
+                        "content": {
+                            "application/json": {
+                                "schema": {
+                                    "properties": {
+                                        "message": {
+                                            "type": "string",
+                                            "example": "Game not found."
+                                        }
+                                    },
+                                    "type": "object"
+                                }
+                            }
+                        }
+                    },
+                    "403": {
+                        "description": "Sin permisos para eliminar el juego",
+                        "content": {
+                            "application/json": {
+                                "schema": {
+                                    "properties": {
+                                        "message": {
+                                            "type": "string",
+                                            "example": "You have no permission! You are not the owner of this game!"
+                                        }
+                                    },
+                                    "type": "object"
+                                }
+                            }
+                        }
+                    }
+                },
+                "security": [
+                    {
+                        "bearerAuth": []
+                    }
+                ]
+            }
+        },
+        "/api/profile/edit": {
+            "get": {
+                "tags": [
+                    "Profile"
+                ],
+                "summary": "Muestra el formulario de edición del perfil de usuario",
+                "description": "Muestra el formulario de edición del perfil de usuario.",
+                "operationId": "edit",
+                "responses": {
+                    "200": {
+                        "description": "Devuelve la vista con el formulario de edición del perfil de usuario"
+                    }
+                },
+                "security": [
+                    {
+                        "bearerAuth": []
+                    }
+                ]
+            }
+        },
+        "/api/profile/update": {
+            "post": {
+                "tags": [
+                    "Profile"
+                ],
+                "summary": "Actualiza el perfil de usuario",
+                "description": "Actualiza el perfil de usuario con los datos proporcionados en la solicitud.",
+                "operationId": "update",
+                "requestBody": {},
+                "responses": {
+                    "302": {
+                        "description": "Redirecciona al formulario de edición del perfil"
+                    }
+                },
+                "security": [
+                    {
+                        "bearerAuth": []
+                    }
+                ]
+            }
+        },
+        "/api/profile/delete": {
+            "delete": {
+                "tags": [
+                    "Profile"
+                ],
+                "summary": "Elimina la cuenta de usuario",
+                "description": "Elimina permanentemente la cuenta de usuario actual.",
+                "operationId": "destroyProfile",
+                "requestBody": {
+                    "required": true,
+                    "content": {
+                        "application/json": {
+                            "schema": {
+                                "required": [
+                                    "password"
+                                ],
+                                "properties": {
+                                    "password": {
+                                        "description": "Contraseña actual del usuario",
+                                        "type": "string",
+                                        "format": "password"
+                                    }
+                                },
+                                "type": "object"
+                            }
+                        }
+                    }
+                },
+                "responses": {
+                    "302": {
+                        "description": "Redirecciona a la página de inicio",
+                        "content": {
+                            "application/json": {
+                                "schema": {
+                                    "type": "object"
+                                }
+                            }
+                        }
+                    },
+                    "401": {
+                        "description": "Contraseña incorrecta",
+                        "content": {
+                            "application/json": {
+                                "schema": {
+                                    "properties": {
+                                        "message": {
+                                            "type": "string",
+                                            "example": "The given data was invalid."
+                                        },
+                                        "errors": {
+                                            "properties": {
+                                                "password": {
+                                                    "type": "array",
+                                                    "items": {
+                                                        "type": "string",
+                                                        "example": "The password is incorrect."
+                                                    }
+                                                }
+                                            },
+                                            "type": "object"
+                                        }
+                                    },
+                                    "type": "object"
+                                }
+                            }
+                        }
+                    }
+                },
+                "security": [
+                    {
+                        "bearerAuth": []
+                    }
+                ]
+            }
+        },
+        "/api/roles": {
+            "get": {
+                "tags": [
+                    "Roles"
+                ],
+                "summary": "Muestra todos los roles",
+                "description": "Recupera todos los roles disponibles en la base de datos.",
+                "operationId": "index",
+                "responses": {
+                    "200": {
+                        "description": "Devuelve la vista con todos los roles"
+                    }
+                },
+                "security": [
+                    {
+                        "bearerAuth": []
+                    }
+                ]
+            }
+        },
+        "/roles/{id}": {
+            "get": {
+                "tags": [
+                    "Roles"
+                ],
+                "summary": "Muestra un rol por ID",
+                "description": "Muestra un rol por ID.",
+                "operationId": "d802cc36abce141fac5f5f972c57952f",
+                "parameters": [
+                    {
+                        "name": "id",
+                        "in": "path",
+                        "description": "ID del rol",
+                        "required": true,
+                        "schema": {
+                            "type": "integer",
+                            "format": "int64"
+                        }
+                    }
+                ],
+                "responses": {
+                    "200": {
+                        "description": "Vista para mostrar el rol"
+                    },
+                    "404": {
+                        "description": "Role not found"
+                    }
+                }
+            }
+        },
+        "/api/users": {
+            "get": {
+                "tags": [
+                    "Users"
+                ],
+                "summary": "Muestra todos los usuarios",
+                "description": "Recupera todos los usuarios registrados en la base de datos.",
+                "operationId": "indexUsers",
+                "responses": {
+                    "200": {
+                        "description": "Devuelve la vista con todos los usuarios"
+                    }
+                },
+                "security": [
+                    {
+                        "bearerAuth": []
+                    }
+                ]
+            }
+        },
+        "/users/{name}": {
+            "get": {
+                "tags": [
+                    "Users"
+                ],
+                "summary": "Mostrar usuario por nombre",
+                "description": "Mostrar usuario por nombre.",
+                "operationId": "5b3350a6cf84f2a038058f9ffa39fd69",
+                "parameters": [
+                    {
+                        "name": "name",
+                        "in": "path",
+                        "description": "Nombre del usuario",
+                        "required": true,
+                        "schema": {
+                            "type": "string"
+                        }
+                    }
+                ],
+                "responses": {
+                    "200": {
+                        "description": "Vista para mostrar al usuario"
+                    },
+                    "302": {
+                        "description": "Redirección al panel de admin"
+                    },
+                    "404": {
+                        "description": "User not found"
+                    }
+                }
+            }
+        },
+        "/register": {
+            "get": {
+                "tags": [
+                    "Authentication"
+                ],
+                "summary": "Muestra el formulario de registro",
+                "description": "Muestra el formulario de registro.",
+                "operationId": "4bb0930f72340551a5e908f41f2f74bf",
+                "responses": {
+                    "200": {
+                        "description": "Vista para mostrar el formulario de registro"
+                    }
+                }
+            },
+            "post": {
+                "tags": [
+                    "Authentication"
+                ],
+                "summary": "Almacena un nuevo usuario creado",
+                "description": "Almacena un nuevo usuario creado.",
+                "operationId": "96c6114f12ed09d2328f8b0b158734fb",
+                "requestBody": {
+                    "required": true,
+                    "content": {
+                        "application/json": {
+                            "schema": {
+                                "properties": {
+                                    "name": {
+                                        "description": "El nombre del usuario",
+                                        "type": "string"
+                                    },
+                                    "nickname": {
+                                        "description": "El nickname del usuario",
+                                        "type": "string"
+                                    },
+                                    "email": {
+                                        "description": "El email del usuario",
+                                        "type": "string",
+                                        "format": "email"
+                                    },
+                                    "password": {
+                                        "description": "La contraseña del usuario",
+                                        "type": "string"
+                                    }
+                                },
+                                "type": "object"
+                            }
+                        }
+                    }
+                },
+                "responses": {
+                    "200": {
+                        "description": "Successful registration"
+                    }
+                }
+            }
+        },
+        "/api/users/{id}/edit": {
+            "get": {
+                "tags": [
+                    "Users"
+                ],
+                "summary": "Muestra el formulario de edición de usuario",
+                "description": "Muestra el formulario de edición de usuario para que un administrador pueda editar los detalles del usuario.",
+                "operationId": "editUser",
+                "parameters": [
+                    {
+                        "name": "id",
+                        "in": "path",
+                        "description": "ID del usuario",
+                        "required": true,
+                        "schema": {
+                            "type": "integer",
+                            "format": "int64"
+                        }
+                    }
+                ],
+                "responses": {
+                    "200": {
+                        "description": "Devuelve la vista con el formulario de edición de usuario",
+                        "content": {
+                            "application/json": {
+                                "schema": {
+                                    "type": "object"
+                                }
+                            }
+                        }
+                    },
+                    "403": {
+                        "description": "No tienes permisos para editar este usuario",
+                        "content": {
+                            "application/json": {
+                                "schema": {
+                                    "properties": {
+                                        "message": {
+                                            "type": "string",
+                                            "example": "You have no permissions to edit this user profile!"
+                                        }
+                                    },
+                                    "type": "object"
+                                }
+                            }
+                        }
+                    }
+                },
+                "security": [
+                    {
+                        "bearerAuth": []
+                    }
+                ]
+            }
+        },
+        "/api/users/{id}": {
+            "put": {
+                "tags": [
+                    "Users"
+                ],
+                "summary": "Actualiza los detalles de un usuario",
+                "description": "Actualiza los detalles de un usuario en la base de datos.",
+                "operationId": "updateUser",
+                "parameters": [
+                    {
+                        "name": "id",
+                        "in": "path",
+                        "description": "ID del usuario",
+                        "required": true,
+                        "schema": {
+                            "type": "integer",
+                            "format": "int64"
+                        }
+                    }
+                ],
+                "requestBody": {
+                    "required": true,
+                    "content": {
+                        "application/json": {
+                            "schema": {
+                                "properties": {
+                                    "name": {
+                                        "description": "Nombre del usuario",
+                                        "type": "string",
+                                        "example": "John Doe"
+                                    },
+                                    "nickname": {
+                                        "description": "Apodo del usuario",
+                                        "type": "string",
+                                        "example": "johndoe"
+                                    },
+                                    "email": {
+                                        "description": "Correo electrónico del usuario",
+                                        "type": "string",
+                                        "format": "email",
+                                        "example": "john@example.com"
+                                    },
+                                    "password": {
+                                        "description": "Nueva contraseña del usuario",
+                                        "type": "string",
+                                        "format": "password",
+                                        "example": "newpassword123"
+                                    }
+                                },
+                                "type": "object"
+                            }
+                        }
+                    }
+                },
+                "responses": {
+                    "302": {
+                        "description": "Redirecciona al panel de administración",
+                        "content": {
+                            "application/json": {
+                                "schema": {
+                                    "type": "object"
+                                }
+                            }
+                        }
+                    },
+                    "404": {
+                        "description": "Usuario no encontrado",
+                        "content": {
+                            "application/json": {
+                                "schema": {
+                                    "properties": {
+                                        "message": {
+                                            "type": "string",
+                                            "example": "User not found."
+                                        }
+                                    },
+                                    "type": "object"
+                                }
+                            }
+                        }
+                    }
+                },
+                "security": [
+                    {
+                        "bearerAuth": []
+                    }
+                ]
+            }
+        },
+        "/users/{user_id}": {
+            "delete": {
+                "tags": [
+                    "Users"
+                ],
+                "summary": "Elimina un usuario específico.",
+                "description": "Elimina un usuario específico.",
+                "operationId": "59036bf9dbc3683fbabfdcab46b2a8c9",
+                "parameters": [
+                    {
+                        "name": "user_id",
+                        "in": "path",
+                        "description": "ID del usuario",
+                        "required": true,
+                        "schema": {
+                            "type": "integer",
+                            "format": "int64"
+                        }
+                    }
+                ],
+                "responses": {
+                    "302": {
+                        "description": "User deleted successfully"
+                    },
+                    "404": {
+                        "description": "User not found"
+                    }
+                }
+            }
+        }
+    },
+    "components": {
+        "responses": {
+            "302": {
+                "description": "Redirect to the login page"
+            },
+            "403": {
+                "description": "Forbidden - User does not have ownership"
+            }
+        },
+        "parameters": {
+            "game_id": {
+                "name": "game_id",
+                "in": "path",
+                "description": "ID del juego",
+                "required": true,
+                "schema": {
+                    "type": "integer",
+                    "format": "int64"
+                }
+            },
+            "id": {
+                "name": "id",
+                "in": "path",
+                "description": "ID del personajer",
+                "required": true,
+                "schema": {
+                    "type": "integer",
+                    "format": "int64"
+                }
+            }
+        }
+    }
+}

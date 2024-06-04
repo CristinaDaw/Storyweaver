@@ -1,0 +1,82 @@
+body {
+    margin: 0; /* Elimina el margen predeterminado del body */
+    padding: 0; /* Elimina el padding predeterminado del body */
+    flex: 1;
+}
+
+main {
+    flex-grow: initial;
+}
+
+#copy-bar {
+    width: 100%;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    gap:3rem;
+    margin: 0 1rem 0 1rem;
+}
+
+#wrapper-copy-bar {
+    width: 100vw;
+    display: flex;
+    justify-content: center;
+}
+
+
+@media (max-width: 1024px) {
+    /* Estilos para tablet */
+
+}
+
+@media (max-width: 767px) {
+    /* Estilos para móvil */
+    nav {
+        padding:0;
+    }
+
+    #auth-menu {
+        display: none;
+    }
+
+    #burger-welcome{
+        display: block;
+        position: fixed;
+        top: 1.8em;
+        right: 2em;
+    }
+
+    #logo-welcome {
+        margin-left: 1.2em;
+    }
+
+    #footer-welcome {
+        height: 10%;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        padding-top: 4em;
+        padding-bottom: 2em;
+        font-size: smaller;
+    }
+
+    #wrapper-welcome {
+        background-position: right;
+        height: 75%;
+    }
+
+    #content-welcome {
+        width: 80vw;
+        margin-right: auto;
+        margin-left: auto;
+        padding: 0;
+        gap: 15em;
+    }
+
+    #content-welcome button{
+        width: 50%;
+        margin-top: 0;
+        font-size: small;
+    }
+}

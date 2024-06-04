@@ -1,0 +1,42 @@
+@media (max-width: 1024px) {
+    /* Estilos para tablet */
+
+}
+
+@media (max-width: 767px) {
+    /* Estilos para móvil */
+    #card-game {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: space-between;
+        margin: 0;
+    }
+
+    #default-carousel {
+        display: none;
+    }
+    #avatar_img {
+        margin-right: 0;
+        margin-bottom: 1rem;
+    }
+
+    #body-character{
+        text-align: center;
+    }
+
+    #character-buttons {
+        display: flex;
+        flex-direction: row;
+        justify-content: space-around;
+        margin: 0;
+        padding-top: 1rem;
+    }
+
+    #character-buttons button{
+        margin: 0;
+    }
+}
+
+
+

@@ -1,0 +1,141 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+
+@keyframes stream {
+    0%,
+    100% {
+        transform: translateX(0) scale(0);
+    }
+
+    50% {
+        transform: translateX(calc(var(--uib-size) * 0.5)) scale(1);
+    }
+
+    99.999% {
+        transform: translateX(calc(var(--uib-size))) scale(0);
+    }
+}
+
+.shadow-solid-primary {
+    box-shadow: 10px 10px var(--color-primary);
+}
+
+#message-container div:nth-child(2){
+    margin-bottom: 2em;
+    width: 40vw;
+    height: 40vh;
+    background-size: auto;
+}
+
+#message-container div.illustration {
+    margin: 0;
+}
+
+#message-container p {
+    font-size: 1vw;
+    line-height: 1.4vw;
+    width: 50%;
+}
+
+/* Estilos para la barra de desplazamiento */
+.custom-scrollbar::-webkit-scrollbar {
+    width: 8px;
+}
+
+/* Estilos para la pista de la barra de desplazamiento */
+.custom-scrollbar::-webkit-scrollbar-track {
+    background-color: #1f2937;
+}
+
+/* Estilos para el thumb (el control deslizante de la barra de desplazamiento) */
+.custom-scrollbar::-webkit-scrollbar-thumb {
+    background-color: #8a63d2;
+    border-radius: 4px;
+}
+
+.avatar {
+    width: 1.5vw;
+    height: 1.5vw;
+    background-size: cover;
+}
+
+.modal-content{
+    width: 90%;
+}
+
+@media (max-width: 1024px) {
+    /* Estilos para tablet */
+    #message-container div:nth-child(2){
+        margin-bottom: 2em;
+        height: 8rem;
+    }
+}
+
+
+@media (max-width: 640px) {
+
+    main {
+        display: flex;
+        flex-direction: column;
+    }
+
+    #chat-wrapper {
+        flex-grow: 2;
+        gap: 0;
+        justify-content: space-evenly;
+    }
+
+    #app-footer {
+        height: 3.1rem;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        padding-top: 10px;
+        padding-bottom: 15px;
+        gap:0;
+    }
+
+    #message-input {
+        margin-bottom: .5rem;
+    }
+
+    footer#app-footer {
+        display: none;
+    }
+
+    footer #logo-footer{
+        margin-bottom: 0;
+        height: 60%;
+    }
+
+    footer #logo-footer img{
+        height: 60%;
+        margin-bottom: 0;
+    }
+
+    footer #footer-text{
+        font-size: .5rem;
+        line-height: .5rem;
+    }
+
+    #message-container {
+        display: flex;
+        flex-direction: column-reverse;
+        margin: 2rem 0 2rem 0;
+    }
+
+    #message-container div {
+        font-size: .8em;
+        line-height: 1.5em;
+        margin: 0 auto 0 auto;
+    }
+
+    #message-container div:nth-child(2){
+        margin-bottom: 2em;
+        height: 15em;
+        width: 15em;
+    }
+
+}

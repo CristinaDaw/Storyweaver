@@ -1,0 +1,13 @@
+# Ignorar archivos generados automáticamente
+__pycache__/
+*.pyc
+
+# Ignorar archivos de entorno virtual (si usas uno)
+venv/
+env/
+
+# Ignorar archivos de registro y caché de PyCharm
+.idea/
+*.iml
+*.iws
+*.ipr

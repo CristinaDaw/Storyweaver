@@ -1,0 +1,35 @@
+body{
+    background-image: url(../img/desaturated-bg.jpg);
+    background-size: cover;
+    transition: background-image 2s ease;
+    background-position: right top;
+
+}
+
+#register-button {
+    text-align: center;
+    line-height: inherit; /* Esto puede ayudar a alinear verticalmente el texto */
+}
+
+
+@media (max-width: 1024px) {
+    /* Estilos para tablet */
+
+}
+
+@media (max-width: 767px) {
+    /* Estilos para móvil */
+    body {
+        background-image: none;
+        background-color: rgb(31, 41, 55);
+    }
+
+    #guest-image-container {
+        display: block;
+        background-image: url(../img/desaturated-bg.jpg);
+        background-size: cover;
+        background-position: right;
+        height: 20%;
+        z-index: 5;
+    }
+}
