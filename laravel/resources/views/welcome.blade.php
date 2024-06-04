@@ -4,6 +4,7 @@
         <meta charset="utf-8">
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
         <title>HOME - Storyweaver</title>
+        <link rel="icon" type="image/png" sizes="16x16" href="{{ asset('img/Isotipo-white.png') }}">
         <script src="https://cdn.tailwindcss.com?plugins=forms,typography,aspect-ratio,line-clamp"></script>
         <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css">
         <link href="{{ asset('css/welcome.css') }}" rel="stylesheet">

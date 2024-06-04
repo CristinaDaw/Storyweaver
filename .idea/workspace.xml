@@ -6,28 +6,12 @@
   <component name="ChangeListManager">
     <list default="true" id="e579477d-84cb-43fa-a55e-5302d96aae0a" name="Changes" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/docker-compose.yml" beforeDir="false" afterPath="$PROJECT_DIR$/docker-compose.yml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/flask-service/.env" beforeDir="false" afterPath="$PROJECT_DIR$/flask-service/.env" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/flask-service/Dockerfile" beforeDir="false" afterPath="$PROJECT_DIR$/flask-service/Dockerfile" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/flask-service/main.py" beforeDir="false" afterPath="$PROJECT_DIR$/flask-service/main.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/flask-service/requirements.txt" beforeDir="false" afterPath="$PROJECT_DIR$/flask-service/requirements.txt" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/laravel/app/Http/Controllers/ChatController.php" beforeDir="false" afterPath="$PROJECT_DIR$/laravel/app/Http/Controllers/ChatController.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/laravel/app/Http/Controllers/GameController.php" beforeDir="false" afterPath="$PROJECT_DIR$/laravel/app/Http/Controllers/GameController.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/laravel/package-lock.json" beforeDir="false" afterPath="$PROJECT_DIR$/laravel/package-lock.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/laravel/package.json" beforeDir="false" afterPath="$PROJECT_DIR$/laravel/package.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/laravel/public/css/chat.css" beforeDir="false" afterPath="$PROJECT_DIR$/laravel/public/css/chat.css" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/laravel/resources/views/character/index.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/laravel/resources/views/character/index.blade.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/laravel/resources/views/character/show.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/laravel/resources/views/character/show.blade.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/laravel/resources/views/dashboard.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/laravel/resources/views/dashboard.blade.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/laravel/resources/views/games/chat.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/laravel/resources/views/games/chat.blade.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/laravel/resources/views/games/index.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/laravel/resources/views/games/index.blade.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/laravel/resources/views/games/show.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/laravel/resources/views/games/show.blade.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/laravel/resources/views/roles/index.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/laravel/resources/views/roles/index.blade.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/laravel/resources/views/roles/show.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/laravel/resources/views/roles/show.blade.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/laravel/resources/views/users/index.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/laravel/resources/views/users/index.blade.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/laravel/resources/views/users/show.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/laravel/resources/views/users/show.blade.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/laravel/routes/web.php" beforeDir="false" afterPath="$PROJECT_DIR$/laravel/routes/web.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/laravel/tailwind.config.js" beforeDir="false" afterPath="$PROJECT_DIR$/laravel/tailwind.config.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/flask-service/app.log" beforeDir="false" afterPath="$PROJECT_DIR$/flask-service/app.log" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/laravel/.env.example" beforeDir="false" afterPath="$PROJECT_DIR$/laravel/.env.example" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/laravel/resources/views/how-to.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/laravel/resources/views/how-to.blade.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/laravel/resources/views/layouts/app.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/laravel/resources/views/layouts/app.blade.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/laravel/resources/views/layouts/guest.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/laravel/resources/views/layouts/guest.blade.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/laravel/resources/views/welcome.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/laravel/resources/views/welcome.blade.php" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -208,7 +192,7 @@
       <option name="number" value="Default" />
       <option name="presentableId" value="Default" />
       <updated>1717490068615</updated>
-      <workItem from="1717490070128" duration="16158000" />
+      <workItem from="1717490070128" duration="17165000" />
     </task>
     <servers />
   </component>
