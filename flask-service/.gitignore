@@ -3,7 +3,7 @@ __pycache__/
 *.pyc
 
 # Ignorar archivos de entorno virtual (si usas uno)
-.venv
+.venv/
 .env
 
 # Ignorar archivos de registro y caché de PyCharm
