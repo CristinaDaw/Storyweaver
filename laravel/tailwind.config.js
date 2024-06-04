@@ -1,4 +1,5 @@
 const defaultTheme = require('tailwindcss/defaultTheme');
+const animations = require('@midudev/tailwind-animations');
 
 /** @type {import('tailwindcss').Config} */
 module.exports = {
@@ -16,5 +17,19 @@ module.exports = {
         },
     },
 
-    plugins: [require('@tailwindcss/forms')],
+    keyframes: {
+        'pulse-fade-in': {
+            '0%': { transform: 'scale(0.9)', opacity: '0' },
+            '50%': { transform: 'scale(1.05)', opacity: '0.5' },
+            '100%': { transform: 'scale(1)', opacity: '1' },
+        }
+    },
+    animation: {
+        'pulse-fade-in': 'pulse-fade-in 0.6s ease-out both',
+    },
+
+    plugins: [
+        require('@tailwindcss/forms'),
+        animations
+    ],
 };

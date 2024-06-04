@@ -13,7 +13,7 @@ import logging
 from flask_cors import CORS, cross_origin
 
 app = Flask(__name__)
-CORS(app)
+CORS(app, resources={r"/*": {"origins": "*"}})
 app.config['CORS_HEADERS'] = 'Content-Type'
 
 logging.basicConfig(
@@ -22,7 +22,7 @@ logging.basicConfig(
     datefmt='%Y-%m-%d %H:%M:%S',
     handlers=[
         logging.FileHandler("app.log"),  # Guardar logs en un archivo
-        logging.StreamHandler()          # Mostrar logs en la consola
+        logging.StreamHandler()  # Mostrar logs en la consola
     ]
 )
 
@@ -33,7 +33,6 @@ redis_host = os.getenv('REDIS_HOST', 'localhost')
 redis_port = int(os.getenv('REDIS_PORT', 6379))
 redis_db = int(os.getenv('REDIS_DB', 0))
 r = redis.Redis(host=redis_host, port=redis_port, db=redis_db)
-
 
 # Diccionario en memoria para almacenar datos temporalmente (sustituto de Redis)
 memory_store = {}
@@ -62,8 +61,8 @@ def dict_to_message(message_dict):
 @cross_origin()
 def chat():
     template = """You are a master of role-playing in the Dungeons & Dragons universe. Your mission is to guide the
-    player through exciting adventures, creating worlds and plots of magic and danger. Based on a given context, a
-    character description in JSON format, a summary of a conversation between the player and yourself, and a
+    player through exciting adventures, creating worlds and plots of magic and danger. Based on a given context, 
+    the player's character description in JSON format, a summary of a conversation between the player and yourself, and a
     player input, you must generate a coherent and cohesive response for the continuity of the plot.
 
     RULES:
@@ -103,7 +102,7 @@ def chat():
     summary = data.get('summary', "")
     character = data.get('character', "")
 
-    logging.info('Context: ' + context)
+    logging.info('Context: ' + str(context))
 
     if context is not None and isinstance(context, str):
         template = template.replace('[context]', context)
@@ -269,7 +268,7 @@ def first_shot_chat():
 
             starting_llm = ChatOpenAI(
                 temperature=0.5,
-                openai_api_key="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",
+                openai_api_key=os.getenv("OPENAI_API_KEY"),
                 model="gpt-3.5-turbo"
             )
             context_prompt = PromptTemplate(template=context_template, input_variables=['character'])
@@ -288,5 +287,7 @@ def first_shot_chat():
         # Maneja las solicitudes de otros métodos
         return 'Método no permitido'
 
+
 if __name__ == '__main__':
-    app.run(debug=True)
+    #Debug/Development
+    app.run(debug=True, host="0.0.0.0", port=5000)

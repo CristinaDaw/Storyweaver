@@ -1,15 +1,26 @@
 # project-root/flask_service/Dockerfile
 FROM python:3.11-slim
 
-WORKDIR /app
+ENV PYTHONUNBUFFERED True
 
-COPY requirements.txt .
+# Copy local code to the container images.
+ENV APP_HOME /app
+WORKDIR $APP_HOME
 
-RUN pip install --upgrade pip && \
-    pip install -r requirements.txt
+COPY requirements.txt requirements.txt
 
-COPY . .
+RUN apt-get update && apt-get install -y curl
+
+RUN apt-get update && apt-get install -y curl && \
+    pip install --upgrade pip && \
+    pip install --no-cache-dir -r requirements.txt
+
+COPY . ./
 
 EXPOSE 5000
 
 CMD ["python", "main.py"]
+
+
+
+

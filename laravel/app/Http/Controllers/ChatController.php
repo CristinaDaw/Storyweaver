@@ -47,7 +47,7 @@ class ChatController extends Controller
 
         $chat_history = $this->getChatHistory($game_id);
 
-        $response = Http::post('http://127.0.0.1:5000/api/chat', [
+        $response = Http::post('http://localhost:5000/api/chat', [
             'character' => $character,
             'message' => $message,
             'context' => $context,
@@ -82,7 +82,7 @@ class ChatController extends Controller
 
         $response_text = $request->input('response_text');
 
-        $imageResponse = Http::post('http://127.0.0.1:5000/api/image', [
+        $imageResponse = Http::post('http://localhost:5000/api/image', [
             'response_text' => $response_text,
         ]);
 

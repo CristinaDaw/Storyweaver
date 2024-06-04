@@ -121,7 +121,7 @@
 
             function fetchFirstShotChat() {
 
-                fetch('http://127.0.0.1:5000/api/first_shot_chat', {
+                fetch('http://localhost:5000/api/first_shot_chat', {
                     method: 'POST',
                     headers: {
                         'Content-Type': 'application/json'
@@ -361,7 +361,6 @@
                 displayMessage(message);
                 const loadingIndicator = document.getElementById('loading-indicator');
                 loadingIndicator.classList.remove('hidden');
-                console.log('{{ $game->context }}');
 
                 fetch('{{ route('api.send-message') }}', {
                     method: 'POST',
@@ -373,7 +372,6 @@
                         game_id: game_id,
                         character: characterData,
                         message: actionType + ': ' + message,
-                        context: '{{ $game->context }}'
                     }),
                 })
                     .then(response => {

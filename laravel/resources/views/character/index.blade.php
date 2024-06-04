@@ -3,10 +3,10 @@
 @endphp
 
 @foreach($characters as $character)
-    
-    <div class="bg-purple-100 p-6 rounded-lg pb-0 shadow-lg pt-8 pb-4 mb-4 mt-0">
-        <h1 class="text-xl font-semibold mb-4 ml-4">Character #{{ $loop->iteration }}</h1>                      
-        
+
+    <div class="character-card animate-pulse-fade-in hidden bg-purple-100 p-6 rounded-lg pb-0 shadow-lg pt-8 pb-4 mb-4 mt-0">
+        <h1 class="text-xl font-semibold mb-4 ml-4">Character #{{ $loop->iteration }}</h1>
+
         @php
             $game = $character->game;
         @endphp
@@ -19,7 +19,7 @@
         <p class="text-gray-600 ml-8">Background: {{ $character->background }}</p>
 
         <div class="mb-0 mr-4">
-            
+
             <form action="{{ route('character.destroy', $character->id) }}" method="post" class="deleteForm inline">
                 @csrf
                 @method('DELETE')
@@ -27,7 +27,7 @@
                     Delete
                 </button>
             </form>
-        </div>                  
+        </div>
     </div>
 @endforeach
 
@@ -35,7 +35,7 @@
     // Para validar eliminar
     var deleteButtons = document.getElementsByClassName('deleteButton');
     var deleteForms = document.getElementsByClassName('deleteForm');
-    
+
     for (var i = 0; i < deleteButtons.length; i++) {
         deleteButtons[i].addEventListener('click', function(event) {
             var input = prompt('To confirm deletion, please type "DELETE":');
@@ -47,4 +47,11 @@
             }
         });
     }
+
+    const characterCards = document.querySelectorAll('.character-card');
+    characterCards.forEach((card, index) => {
+        setTimeout(() => {
+            card.classList.remove('hidden')
+        }, index * 800); // Ajusta el tiempo de retraso según sea necesario (200ms en este ejemplo)
+    });
 </script>

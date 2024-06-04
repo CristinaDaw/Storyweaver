@@ -167,6 +167,13 @@ class GameController extends Controller
         return view('games.show', compact('game'));
     }
 
+    public function getContext($game_id): \Illuminate\Http\JsonResponse
+    {
+        $context = Game::findOrFail($game_id)->context;
+
+        return response()->json($context);
+    }
+
 
     /**
      * Finaliza un juego.

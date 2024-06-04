@@ -69,6 +69,7 @@ Route::middleware(['auth', 'checkOwnership'])->group(function () {
     Route::prefix('game')->name('game.')->group(function () {
         Route::get('/{game_id}', [GameController::class, 'show'])->name('show');
         Route::get('/chat/{game_id}', [GameController::class, 'resume'])->name('resume');
+        Route::get('/{game_id}/context', [GameController::class, 'getContext'])->name('context');
         Route::delete('/delete/{game_id}', [GameController::class, 'destroy'])->name('destroy');
         Route::patch('/finish/{game_id}', [GameController::class, 'finish'])->name('finish');
         Route::post('/store', [GameController::class, 'store'])->name('store');

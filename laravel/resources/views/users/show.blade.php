@@ -1,4 +1,4 @@
-<div class="bg-purple-100 p-6 rounded-lg shadow-lg pt-8 pb-4 mb-4 mt-0">
+<div class="animate-pulse-fade-in bg-purple-100 p-6 rounded-lg shadow-lg pt-8 pb-4 mb-4 mt-0">
     <h1 class="text-xl font-semibold mb-4 ml-4">User #1</h1>
 
     <p class="text-gray-600 ml-8">ID: {{ $user->id }}</p>
