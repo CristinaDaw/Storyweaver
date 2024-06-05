@@ -1,10 +1,10 @@
 <section class="space-y-6">
     <header>
-        <h2 class="text-lg font-medium text-gray-900 dark:text-gray-100">
+        <h2 class="text-lg font-medium text-gray-100 dark:text-gray-100">
             {{ __('Eliminar cuenta') }}
         </h2>
 
-        <p class="mt-1 text-sm text-gray-600 dark:text-gray-400">
+        <p class="mt-1 text-sm text-gray-400 dark:text-gray-400">
             {{ __('Una vez su cuenta sea eliminada, tanto su configuración como sus datos serán eliminados permanentemente. Antes de eliminar su cuenta, asegúrese de hacer una copia de cualquier dato o información que desee salvaguardar.') }}
         </p>
     </header>
@@ -19,11 +19,11 @@
             @csrf
             @method('delete')
 
-            <h2 class="text-lg font-medium text-gray-900 dark:text-gray-100">
+            <h2 class="text-lg font-medium text-gray-100 dark:text-gray-100">
                 {{ __('Está usted seguro de querer eliminar su cuenta?') }}
             </h2>
 
-            <p class="mt-1 text-sm text-gray-600 dark:text-gray-400">
+            <p class="mt-1 text-sm text-gray-400 dark:text-gray-400">
                 {{ __('Una vez eliminada su cuenta, tanto su configuración como sus datos serán eliminados permanentemente. Por favor, introduzca su contraseña si desea eliminar permanentemente su cuenta.') }}
             </p>
 

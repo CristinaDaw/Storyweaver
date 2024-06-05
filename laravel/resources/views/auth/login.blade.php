@@ -5,7 +5,7 @@
         <div id="logo-login">
             <img class="w-20 h-20" src="{{ asset("img/Isotipo-white.png") }}">
         </div>
-        <h1 class="text-2xl font-bold leading-tight tracking-tight text-gray-900 dark:text-white">
+        <h1 class="text-2xl font-bold leading-tight tracking-tight text-white dark:text-white">
             Inicia sesión
         </h1>
         <form method="POST" action="{{ route('login') }}">
@@ -13,16 +13,16 @@
 
             <!-- Email Address -->
             <div>
-                <x-input-label for="email" class="block mb-2 text-md font-medium text-gray-900 dark:text-white" :value="__('Correo electrónico')" />
-                <x-text-input id="email" class="block mt-1 w-full" type="email" name="email" :value="old('email')" required autofocus placeholder="name@company.com" autocomplete="username" />
+                <x-input-label for="email" class="block mb-2 text-md font-medium text-white dark:text-white" :value="__('Correo electrónico')" />
+                <x-text-input id="email" class="block mt-1 w-full bg-gray-700  text-gray-300 " type="email" name="email" :value="old('email')" required autofocus placeholder="name@company.com" autocomplete="username" />
                 <x-input-error :messages="$errors->get('email')" class="mt-2" />
             </div>
 
             <!-- Password -->
             <div class="mt-4">
-                <x-input-label for="password" class="block mb-2 text-md font-medium text-gray-900 dark:text-white" :value="__('Contraseña')" />
+                <x-input-label for="password" class="block mb-2 text-md font-medium text-white dark:text-white" :value="__('Contraseña')" />
 
-                <x-text-input id="password" class="block mt-1 w-full"
+                <x-text-input id="password" class="block mt-1 w-full text-gray-300 bg-gray-700"
                               type="password"
                               name="password"
                               placeholder="••••••••"
@@ -46,7 +46,7 @@
 
             <!-- Submit Button -->
             <div class="flex items-center justify-end mt-4">
-                <x-primary-button class="ml-3 mt-4 text-white px-auto text-center bg-black hover:bg-purple-500 focus:ring-4 focus:outline-none focus:ring-purple-300 font-medium rounded-lg text-sm dark:bg-purple-300 dark:hover:bg-purple-900 dark:hover:text-white dark:focus:ring-purple-300">
+                <x-primary-button class="ml-3 mt-4 text-white px-auto text-center bg-gray-950 hover:bg-purple-500 focus:ring-4 focus:outline-none focus:ring-purple-300 font-medium rounded-lg text-sm dark:bg-purple-300 dark:hover:bg-purple-900 dark:hover:text-white dark:focus:ring-purple-300">
                     {{ __('Iniciar Sesión') }}
                 </x-primary-button>
             </div>

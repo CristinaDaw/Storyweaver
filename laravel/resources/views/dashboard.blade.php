@@ -5,7 +5,7 @@
 {{--        </h2>--}}
 {{--    </x-slot>--}}
 
-    <div class="py-4 h-[80%]">
+    <div class="py-4 h-[80%] bg-gray-900">
         <div class="max-w-7xl mx-auto sm:px-6 lg:px-8">
             @if(session('error'))
                 <div id="errorMessage" class="alert alert-danger ml-24 mb-12 text-red-800 text-xs dark:text-green-200 font-semibold" role="alert">
@@ -45,7 +45,7 @@
 
                                 @if ($games)
                                     @foreach($games as $game)
-                                        <div class="game-card hover:scale-125 hidden animate-pulse-fade-in bg-white p-6 dark:bg-purple-200 rounded-lg shadow-lg pt-4 mt-4">
+                                        <div class="game-card hover:scale-125 hidden animate-pulse-fade-in p-6 bg-purple-200 dark:bg-purple-200 rounded-lg shadow-lg pt-4 mt-4">
                                             <h2 class="text-xl font-semibold mb-4">Aventura # {{ $loop->iteration }}</h2>
 
                                             @if ($game->character)

@@ -1,6 +1,6 @@
 <div id="default-carousel" class="mt-0" data-carousel="slide">
-    <h2 class="text-xs font-semibold dark:text-white ml-24 mb-4">Eventos recientes</h2>
-    <div class="flex items-center justify-center h-10 overflow-hidden rounded-lg mb-2 px-4 mx-24 bg-purple-100 dark:bg-purple-500 dark:text-white dark:border-none p-2 shadow-lg border border-solid border-purple-300">
+    <h2 class="text-xs font-semibold text-white dark:text-white ml-24 mb-4">Eventos recientes</h2>
+    <div class="flex items-center justify-center h-10 overflow-hidden rounded-lg mb-2 px-4 mx-24 bg-purple-500 dark:bg-purple-500 text-white dark:text-white border-none p-2 shadow-lg border border-solid border-purple-300">
         @foreach ($latestEvents as $key=>$event)
             <div class=" {{ $key == 0 ? 'active' : 'hidden' }} duration-700 ease-in-out" data-carousel-item>
                 <p class="text-xs m-2 text-center">{{ $event->description }}</p>

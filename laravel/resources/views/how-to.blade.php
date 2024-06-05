@@ -26,7 +26,7 @@
                 <div class="px-3 w-full lg:w-2/5">
                     <div
                         class="mx-auto mb-8 max-w-lg text-center lg:mx-0 lg:max-w-md lg:text-left">
-                        <h2 class="mb-4 text-3xl font-bold text-left lg:text-5xl dark:text-white">
+                        <h2 class="mb-4 text-3xl font-bold text-left lg:text-5xl text-white dark:text-white">
                             Genera tu propia
 
                             <span class="text-5xl text-purple-500 leading-relaxed"
@@ -114,10 +114,10 @@
 
             <!-- Content -->
             <section class="p-20 space-y-8">
-                <h1 class="text-5xl dark:text-white font-semibold text-center my-20">Empezar a jugar</h1>
+                <h1 class="text-5xl text-white dark:text-white font-semibold text-center my-20">Empezar a jugar</h1>
                 <div id="Guideline-wrapper" class="flex flex-col justify-between items-center">
-                    <h2 class="text-2xl dark:text-white self-start mt-14 mb-8">Paso 1: Regístrate en Storyweaver</h2>
-                    <p class="dark:text-white mb-12">
+                    <h2 class="text-2xl text-white dark:text-white self-start mt-14 mb-8">Paso 1: Regístrate en Storyweaver</h2>
+                    <p class="text-white dark:text-white mb-12">
                         Desde la HOME PAGE dirígete a la esquina superior derecha y pulsa sobre el botón de 'Regístrate'.
                         Una vez hecho esto se te redirigirá a una vista con un formulario de registro. Deberás rellenar
                         todos los campos requeridos en este formulario sin excepción así como aceptar los
@@ -132,8 +132,8 @@
                 </div>
 
                 <div id="Guideline-wrapper" class="flex flex-col justify-between items-center">
-                    <h2 class="text-2xl dark:text-white self-start mt-14 mb-8">Paso 2: Crear un juego</h2>
-                    <p class="dark:text-white mb-12">
+                    <h2 class="text-2xl text-white dark:text-white self-start mt-14 mb-8">Paso 2: Crear un juego</h2>
+                    <p class="text-white dark:text-white mb-12">
                         Cuando hayas terminado el registro de tu usuario se te redirigirá automáticamente al Panel de usuario
                         para tu cuenta. En éste deberías ver la relación de juegos que tienes tanto en curso como finalizados.
                         Si es la primera vez que accedes a Storyweaver no habrá ningún juego por lo que verás un mensaje indicativo
@@ -146,8 +146,8 @@
                 </div>
 
                 <div id="Guideline-wrapper" class="flex flex-col justify-between items-center">
-                    <h2 class="text-2xl dark:text-white self-start mt-14 mb-8">Paso 3: Creación de tu personaje</h2>
-                    <p class="dark:text-white mb-12">
+                    <h2 class="text-2xl text-white dark:text-white self-start mt-14 mb-8">Paso 3: Creación de tu personaje</h2>
+                    <p class="text-white dark:text-white mb-12">
                         Una vez pulsado en el símbolo '+' se te redirigirá a un formulario de creación de personaje.
                         Nuevamente deberás rellenar todos los campos del formulario a fin de completar la configuración
                         de tu personaje para este juego concreto. También podrás aportar una url con la imagen
@@ -161,8 +161,8 @@
                 </div>
 
                 <div id="Guideline-wrapper" class="flex flex-col justify-between items-center">
-                    <h2 class="text-2xl dark:text-white self-start mt-14 mb-8">Paso 4: Empezar a jugar</h2>
-                    <p class="dark:text-white mb-12">
+                    <h2 class="text-2xl text-white dark:text-white self-start mt-14 mb-8">Paso 4: Empezar a jugar</h2>
+                    <p class="text-white dark:text-white mb-12">
                         Tras crear nuestro personaje seremos redirigidos nuevamente al Panel de usuario donde ahora sí
                         podremos ver la ficha de nuestro juego y su personaje mostrándose en el listado de juegos.
                         Ya estamos listos para comenzar nuestra aventura, y para ello simplemente debemos pulsar en
@@ -174,8 +174,8 @@
                     </div>
                 </div>
                 <div id="Guideline-wrapper" class="flex flex-col justify-between items-center">
-                    <h2 class="text-2xl dark:text-white self-start mt-14 mb-8">Paso 5: Iniciar la conversación</h2>
-                    <p class="dark:text-white mb-12">
+                    <h2 class="text-2xl text-white dark:text-white self-start mt-14 mb-8">Paso 5: Iniciar la conversación</h2>
+                    <p class="text-white dark:text-white mb-12">
                         Al acceder a la ventana de chat del juego veremos que nuestro Master impulsado por IA nos habrá
                         generado un mensaje de inicio de la partida con datos de nuestro personaje en él. A partir de
                         aquí será responsabilidad nuestra continuar la conversación. Para ello simplemente deberemos seleccionar
@@ -191,8 +191,8 @@
                 </div>
 
                 <div id="Guideline-wrapper" class="flex flex-col justify-between items-center">
-                    <h2 class="text-2xl dark:text-white self-start mt-14 mb-8">Paso 6: Recibir respuesta</h2>
-                    <p class="dark:text-white mb-12">
+                    <h2 class="text-2xl text-white dark:text-white self-start mt-14 mb-8">Paso 6: Recibir respuesta</h2>
+                    <p class="text-white dark:text-white mb-12">
                         Transcurridos unos pocos segundos recibiremos por parte de nuestro Master una respuesta. Ésta
                         estará compuesta de un mensaje de texto con el propio contenido de la respuesta continuando
                         nuestra aventura y, además una imagen ilustrativa del propio mensaje generada por
@@ -205,8 +205,8 @@
                 </div>
 
                 <div id="Guideline-wrapper" class="flex flex-col justify-between items-center">
-                    <h2 class="text-2xl dark:text-white self-start mt-14 mb-8">Paso 7: Finalizar un juego</h2>
-                    <p class="dark:text-white mb-12">
+                    <h2 class="text-2xl text-white dark:text-white self-start mt-14 mb-8">Paso 7: Finalizar un juego</h2>
+                    <p class="text-white dark:text-white mb-12">
                         En el panel de usuario, concretamente en la ficha de nuestro juego, encontraremos un pequeño
                         menú de puntos desplegable. En él podremos seleccionar: 'Finalizar' si consideramos que queremos
                         dar por finalizada nuestra aventura pero conservar los datos de la misma, ó 'Eliminar', si lo
