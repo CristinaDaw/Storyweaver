@@ -14,7 +14,7 @@
     </head>
     <body class="bg-gray-900 flex-col min-h-screen justify-between h-screen">
         <nav class="bg-transparent h-20 p-4 flex justify-between items-center xs:flex-col">
-            <a id="logo-welcome"  href="{{ route('welcome') }}" class="ml-14">
+            <a id="logo-welcome"  href="{{ route('welcome') }}" class="ml-14 animate-rotate-in">
                 <img src="{{ asset("img/Isotipo-white.png") }}" class="w-10 h-10" alt="Isologo-white">
             </a>
         </nav>

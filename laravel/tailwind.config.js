@@ -22,10 +22,15 @@ module.exports = {
             '0%': { transform: 'scale(0.9)', opacity: '0' },
             '50%': { transform: 'scale(1.05)', opacity: '0.5' },
             '100%': { transform: 'scale(1)', opacity: '1' },
+        },
+        'rotate-in': {
+            '0%': { opacity: '0', transform: 'rotate(-90deg)' },
+            '100%': { opacity: '1', transform: 'rotate(0deg)' }
         }
     },
     animation: {
         'pulse-fade-in': 'pulse-fade-in 0.6s ease-out both',
+        'rotate-in': 'rotate-in 0.6s ease-out both',
     },
 
     plugins: [

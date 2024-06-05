@@ -514,22 +514,6 @@
                 }
             });
 
-        document.addEventListener('DOMContentLoaded', function () {
-            const promptToggle = document.getElementById('underline-select');
-            const messageInput = document.getElementById('message-input');
-            const sendButton = document.getElementById('send-button');
-
-
-            // Enviar mensaje al hacer clic en el botón de enviar
-            sendButton.addEventListener('click', function () {
-                const message = messageInput.value.trim();
-                if (message !== '') {
-                    const selectedOption = promptToggle.value;
-                    sendMessage(selectedOption, message);
-                    messageInput.value = ''; // Limpiar el input después de enviar el mensaje
-                }
-            })
-        });
 
 
         document.addEventListener('DOMContentLoaded', function () {

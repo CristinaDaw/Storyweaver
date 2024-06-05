@@ -4,7 +4,7 @@
         <div class="flex justify-between h-16">
             <div class="flex">
                 <!-- Logo -->
-                <div class="shrink-0 flex items-center">
+                <div class="shrink-0 flex items-center animate-rotate-in">
                     <a href="{{ route('welcome') }}">
                         <img src='{{ asset('img/Isotipo-white.png') }}' class="w-10 h-10" alt="Isologo-white"/>
                     </a>

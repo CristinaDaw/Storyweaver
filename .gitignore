@@ -1,0 +1,4 @@
+flask-service/.env
+laravel/.env
+.idea/
+flask-service/app.log

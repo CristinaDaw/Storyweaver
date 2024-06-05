@@ -45,7 +45,7 @@
 
                                 @if ($games)
                                     @foreach($games as $game)
-                                        <div class="game-card hidden animate-pulse-fade-in bg-white p-6 dark:bg-purple-200 rounded-lg shadow-lg pt-4 mt-4">
+                                        <div class="game-card hover:scale-125 hidden animate-pulse-fade-in bg-white p-6 dark:bg-purple-200 rounded-lg shadow-lg pt-4 mt-4">
                                             <h2 class="text-xl font-semibold mb-4">Aventura # {{ $loop->iteration }}</h2>
 
                                             @if ($game->character)
